@@ -12,7 +12,8 @@ const Sponsors = () => {
         const fetchSponsors = async () => {
             try {
                 const response = await fetch("../api/v1/sponsers");
-                const result = await response.json();
+                const result = await response.json(); 
+                console.log("hello")
                 setSponsors(result.data);
             } catch (error) {
                 console.error("Error fetching sponsors:", error);
