@@ -7,6 +7,7 @@ export default async function handler(req, res) {
     if (req.method === "GET") {
         try {
             const sponsers = await Sponsor.find();
+            console.log("hello2s")
             res.status(200).json({ success: true, data: sponsers });
         } catch (error) {
             console.error(error);
